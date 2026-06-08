@@ -101,8 +101,6 @@ public class AVLTreeUserInput {
 
         return node;
     }
-
-    // Displays the tree hierarchy clearly to easily confirm balancing
     public void printTree() {
         printTreeRecursive(root, "", true);
     }
