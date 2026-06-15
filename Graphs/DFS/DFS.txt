@@ -1,0 +1,17 @@
+//DFS (DEPTH FIRST SEARCH)
+
+// starting node = 1
+// graph given
+// eg = 1 2 5 (backtrack to 2 and go to) 6 (backtrack to 2) (backtrack to 1 and go to) 3 7 8  4 
+
+//starting node = 3
+// eg : 3 4 8 7 (backtrack to 3) 1 2 5 (backtrack to 2) 6
+
+//stored in adjcency list
+// need a visited array
+
+//dfs(node){
+     vis[node] = 1 
+     list.add(node)
+
+//
