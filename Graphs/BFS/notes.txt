@@ -1,0 +1,18 @@
+1.Connected Components
+
+2. Visited array to be used to prevent infinite loops caused by cycles to avoid redundant processing of the
+same nodes.
+3. Graphs can have interconnected loops where a node can point back to an ancestor or a prev processed
+neighbour.
+
+4.Visited array is helpful to maintain O(V + E) time complexity
+
+5. CORE PATTERN
+
+for(i to 10)
+      if(!vis[i])
+           traversal[i]
+
+6. after traversing a single componenet it will store in visited array
+7.move to next componenet _ marked as not visited move to call traversal[i] 
+
