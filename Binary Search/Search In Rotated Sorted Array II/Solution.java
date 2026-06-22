@@ -1,25 +1,23 @@
-import java.util.*;
-
 class Solution {
-    public boolean searchInRotatedSortedArrayII(int[] arr, int k) {
-        int low = 0, high = arr.length - 1;
+    public boolean search(int[] nums, int target) {
+        int low = 0, high = nums.length - 1;
 
         while (low <= high) {
             int mid = (low + high) / 2;
 
             // If mid element is the target
-            if (arr[mid] == k) return true;
+            if (nums[mid] == target) return true;
 
             // Handle duplicates: cannot determine sorted side
-            if (arr[low] == arr[mid] && arr[mid] == arr[high]) {
+            if (nums[low] == nums[mid] && nums[mid] == nums[high]) {
                 low++;
                 high--;
                 continue;
             }
 
             // Left half is sorted
-            if (arr[low] <= arr[mid]) {
-                if (arr[low] <= k && k <= arr[mid]) {
+            if (nums[low] <= nums[mid]) {
+                if (nums[low] <= target && target <= nums[mid]) {
                     high = mid - 1; // Search left
                 } else {
                     low = mid + 1;  // Search right
@@ -27,7 +25,7 @@ class Solution {
             }
             // Right half is sorted
             else {
-                if (arr[mid] <= k && k <= arr[high]) {
+                if (nums[mid] <= target && target <= nums[high]) {
                     low = mid + 1;  // Search right
                 } else {
                     high = mid - 1; // Search left
@@ -37,3 +35,4 @@ class Solution {
 
         return false; // Not found
     }
+}
