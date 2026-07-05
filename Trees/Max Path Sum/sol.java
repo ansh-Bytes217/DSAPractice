@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution{
   int ans = Integer.MIN_VALUE;
-
+  
   public int maxPathSum(TreeNode root){
     helper(root);
     reutrn ans;
